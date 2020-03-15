@@ -52,8 +52,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kraj.cs" />
+    <Compile Include="Magazyn.cs" />
+    <Compile Include="MagazynContext.cs" />
+    <Compile Include="MagazynDbInitializer.cs" />
+    <Compile Include="Producent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Towar.cs" />
+    <Compile Include="TowarConfigurations.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
