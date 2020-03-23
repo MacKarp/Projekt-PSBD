@@ -72,23 +72,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoNaSprzedaz.cs" />
+    <Compile Include="AutoNaSprzedazConfigurations.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kraj.cs" />
-    <Compile Include="Magazyn.cs" />
-    <Compile Include="MagazynContext.cs" />
-    <Compile Include="MagazynDbInitializer.cs" />
-    <Compile Include="Producent.cs" />
+    <Compile Include="Form_DodajAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DodajAuto.Designer.cs">
+      <DependentUpon>Form_DodajAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KolorNadwozia.cs" />
+    <Compile Include="KomisContext.cs" />
+    <Compile Include="KomisDbInitializer.cs" />
+    <Compile Include="Marka.cs" />
+    <Compile Include="PojemnoscSilnika.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Towar.cs" />
-    <Compile Include="TowarConfigurations.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="RodzajNadwozia.cs" />
+    <Compile Include="RodzajPaliwa.cs" />
+    <Compile Include="RokProdukcji.cs" />
+    <Compile Include="TypSkrzyniBiegow.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DodajAuto.resx">
+      <DependentUpon>Form_DodajAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -20,21 +20,26 @@ namespace Projekt_PSBD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("naciskam button");
-            using (var ctx = new MagazynContext())
+            using (var ctx = new KomisContext())
             {
-                Debug.WriteLine("var towar");
-                var towar = new Towar()
+                List<string> rodzajPaliwaList = new List<string>();
+                rodzajPaliwaList.Add("Benzyna");
+                rodzajPaliwaList.Add("Benzyna + CNG");
+                rodzajPaliwaList.Add("Benzyna + LPG");
+                rodzajPaliwaList.Add("Diesel");
+                rodzajPaliwaList.Add("Elektryczny");
+                rodzajPaliwaList.Add("Hybryda");
+                rodzajPaliwaList.Add("Inny");
+                for (int i = 0; i < rodzajPaliwaList.Count; i++)
                 {
-                    NazwaTowaru = "MateBook D 15",
-                    Producent = new Producent() { NazwaProducenta = "Huawei", AdresProducenta = "Wuhan", Kraj = new Kraj() { NazwaKraju = "Chiny" } },
-                    CenaTowaru = 2.99,
-                    IloscTowaru = 100
-                };
-                Debug.WriteLine("ctx.towary.add");
-                ctx.Towary.Add(towar);
+                    var paliwo = new RodzajPaliwa()
+                    {
+                        Paliwo = rodzajPaliwaList.ElementAt(i)
+                    };
+                    ctx.RodzajPaliwas.Add(paliwo);
+                }
                 ctx.SaveChanges();
-            }
+            };
         }
     }
 }

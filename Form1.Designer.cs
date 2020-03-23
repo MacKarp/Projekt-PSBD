@@ -33,9 +33,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(200, 122);
+            this.button1.Location = new System.Drawing.Point(249, 161);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(331, 159);
+            this.button1.Size = new System.Drawing.Size(269, 110);
             this.button1.TabIndex = 0;
             this.button1.Text = "Test. Tworzy baze";
             this.button1.UseVisualStyleBackColor = true;
