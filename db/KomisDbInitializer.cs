@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
+﻿using System.Data.Entity;
 
-namespace Projekt_PSBD
+namespace Projekt_PSBD.db
 {
+
     public class KomisDbInitializer : CreateDatabaseIfNotExists<KomisContext>
     {
+
         protected override void Seed(KomisContext context)
         {
             base.Seed(context);
         }
     }
 }
+
 
 

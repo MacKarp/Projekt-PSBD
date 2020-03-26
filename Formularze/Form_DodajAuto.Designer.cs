@@ -1,4 +1,4 @@
-﻿namespace Projekt_PSBD
+﻿namespace Projekt_PSBD.Formularze
 {
     partial class Form_DodajAuto
     {
@@ -93,6 +93,8 @@
             this.Controls.Add(this.comboBoxMarka);
             this.Name = "Form_DodajAuto";
             this.Text = "Form_DodajAuto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_DodajAuto_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_DodajAuto_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Core.EntityClient;
-using System.Drawing;
+using System.Deployment.Application;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projekt_PSBD.db;
 
-namespace Projekt_PSBD
+namespace Projekt_PSBD.Formularze
 {
     public partial class Form_DodajAuto : Form
     {
@@ -45,6 +39,16 @@ namespace Projekt_PSBD
         private void labelModel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form_DodajAuto_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void Form_DodajAuto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

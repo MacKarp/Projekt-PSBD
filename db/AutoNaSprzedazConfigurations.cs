@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 
-namespace Projekt_PSBD
+namespace Projekt_PSBD.db
 {
     public class AutoNaSprzedazConfigurations : EntityTypeConfiguration<AutoNaSprzedaz>
     {
