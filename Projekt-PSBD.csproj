@@ -93,12 +93,6 @@
   <ItemGroup>
     <Compile Include="AutoNaSprzedaz.cs" />
     <Compile Include="db\AutoNaSprzedazConfigurations.cs" />
-    <Compile Include="Formularze\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularze\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularze\Form_DodajAuto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,9 +130,6 @@
     <Compile Include="RokProdukcji.cs" />
     <Compile Include="TypSkrzyniBiegow.cs" />
     <Compile Include="Uzytkownik.cs" />
-    <EmbeddedResource Include="Formularze\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularze\Form_DodajAuto.resx">
       <DependentUpon>Form_DodajAuto.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +152,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Diagram_Klas.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

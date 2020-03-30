@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Projekt_PSBD.Uzytkownik">
+    <Position X="11.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAADAAAAAAAAAAAAAAAgAACAAAgAACAAAAA=</HashCode>
+      <FileName>Uzytkownik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.AutoNaSprzedaz">
+    <Position X="3.5" Y="0.5" Width="2" />
+    <AssociationLine Name="KolorNadwozia" Type="Projekt_PSBD.KolorNadwozia" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="2.565" />
+        <Point X="5.25" Y="4.875" />
+        <Point X="6.125" Y="4.875" />
+        <Point X="6.125" Y="5.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.795" Y="0.598" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Model" Type="Projekt_PSBD.Model" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="2.062" />
+        <Point X="2.519" Y="2.062" />
+        <Point X="2.519" Y="2.312" />
+        <Point X="2" Y="2.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.532" Y="0.304" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PojemnoscSilnika" Type="Projekt_PSBD.PojemnoscSilnika" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="2.188" />
+        <Point X="2.84" Y="2.188" />
+        <Point X="2.84" Y="4.148" />
+        <Point X="2.25" Y="4.148" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="-0.273" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="RodzajNadwozia" Type="Projekt_PSBD.RodzajNadwozia" FixedToPoint="true">
+      <Path>
+        <Point X="4.188" Y="2.565" />
+        <Point X="4.188" Y="5.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.3" Y="0.16" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="RodzajPaliwa" Type="Projekt_PSBD.RodzajPaliwa" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="2.565" />
+        <Point X="3.75" Y="5.469" />
+        <Point X="2" Y="5.469" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="RokProdukcji" Type="Projekt_PSBD.RokProdukcji" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.438" Y="2.565" />
+        <Point X="7.125" Y="2.565" />
+        <Point X="7.125" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.343" Y="0.138" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TypSkrzyniBiegow" Type="Projekt_PSBD.TypSkrzyniBiegow" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="0.812" />
+        <Point X="7.625" Y="0.812" />
+        <Point X="7.625" Y="1" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.376" Y="0.337" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAACAAAIABAAAAggAEAQAAAAAMAgDAAAAAAQ=</HashCode>
+      <FileName>AutoNaSprzedaz.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="KolorNadwozia" />
+      <Property Name="Marka" />
+      <Property Name="Model" />
+      <Property Name="PojemnoscSilnika" />
+      <Property Name="RodzajNadwozia" />
+      <Property Name="RodzajPaliwa" />
+      <Property Name="RokProdukcji" />
+      <Property Name="TypSkrzyniBiegow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Projekt_PSBD.KolorNadwozia">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>KolorNadwozia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.Marka">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Marka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.Model">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.PojemnoscSilnika">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAAAA=</HashCode>
+      <FileName>PojemnoscSilnika.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.RodzajNadwozia">
+    <Position X="4" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAAAAAAAAAA=</HashCode>
+      <FileName>RodzajNadwozia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.RodzajPaliwa">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RodzajPaliwa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.RokProdukcji">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAA=</HashCode>
+      <FileName>RokProdukcji.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.TypSkrzyniBiegow">
+    <Position X="6.75" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TypSkrzyniBiegow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.db.AutoNaSprzedazConfigurations">
+    <Position X="2.75" Y="14.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>db\AutoNaSprzedazConfigurations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.db.KomisContext">
+    <Position X="0.5" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AASAGAAAAAAgAAAAAAAAAEAAEAAAAIAAAAgCAAABAAA=</HashCode>
+      <FileName>db\KomisContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.db.KomisDbInitializer">
+    <Position X="2.75" Y="16.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>db\KomisDbInitializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.Formularze.Panel_logowania">
+    <Position X="0.5" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>KAAIAAAAACAAgAAACACAAAASADEAAAAEAQAIAAAUAAA=</HashCode>
+      <FileName>Formularze\Panel_logowania.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.Formularze.Form_PanelUzytkownikow">
+    <Position X="2.75" Y="7.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>ACwkAgQBUCAAAAAAAGKAAAQCgAACBAAAEAgAgABAIEA=</HashCode>
+      <FileName>Formularze\Form_PanelUzytkownikow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.Formularze.Form_OknoGlowne">
+    <Position X="7" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAACAAAAAgAACAAAADAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Formularze\Form_OknoGlowne.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.Formularze.Form_DodajAuto">
+    <Position X="9.75" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAEEAAIAACAAACAIAACAAAACAAAIAAAAIEAAAAAEQAA=</HashCode>
+      <FileName>Formularze\Form_DodajAuto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projekt_PSBD.Program">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
