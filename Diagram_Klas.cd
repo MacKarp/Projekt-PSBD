@@ -70,8 +70,8 @@
     </AssociationLine>
     <AssociationLine Name="TypSkrzyniBiegow" Type="Projekt_PSBD.TypSkrzyniBiegow" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.5" Y="0.812" />
-        <Point X="7.625" Y="0.812" />
+        <Point X="5.5" Y="0.813" />
+        <Point X="7.625" Y="0.813" />
         <Point X="7.625" Y="1" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
