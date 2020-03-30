@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Panel_logowania));
             this.labelLoginTextBox = new System.Windows.Forms.Label();
             this.labelPasswordTextBox = new System.Windows.Forms.Label();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
@@ -146,6 +147,7 @@
             this.Controls.Add(this.labelPasswordTextBox);
             this.Controls.Add(this.labelLoginTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Panel_logowania";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

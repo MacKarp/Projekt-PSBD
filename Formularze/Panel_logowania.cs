@@ -98,8 +98,10 @@ namespace Projekt_PSBD.Formularze
                         {
                             Debug.WriteLine("Logowanie poprawne!");
                             labelErrorLogin.Visible = false;
-                            Form_DodajAuto dodajAuto = new Form_DodajAuto();
-                            dodajAuto.Show(this);
+
+                            //todo : przekazywanie danych logowania
+                            Form_OknoGlowne oknoGlowne = new Form_OknoGlowne();
+                            oknoGlowne.Show(this);
                             this.Hide();
                             break;
                         }
