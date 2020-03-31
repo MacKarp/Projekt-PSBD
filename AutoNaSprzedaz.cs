@@ -3,6 +3,7 @@
     public class AutoNaSprzedaz
     {
         public int AutoNaSprzedazID { get; set; }
+        public string TytulOferty { get; set; }
         public virtual Marka Marka { get; set; }
         public virtual Model Model { get; set; }
         public virtual RokProdukcji RokProdukcji { get; set; }

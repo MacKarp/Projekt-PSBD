@@ -19,11 +19,6 @@ namespace Projekt_PSBD.Formularze
             this.Owner.Show();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         //lista uzytkownikow
         private void aktualizacjaListyUzytkownikow()
         {
