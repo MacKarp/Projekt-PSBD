@@ -40,9 +40,10 @@
             this.buttonZmienUzytkownika = new System.Windows.Forms.Button();
             this.buttonUsunUzytkownika = new System.Windows.Forms.Button();
             this.labelZmianaHasla = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxHaslo = new System.Windows.Forms.TextBox();
+            this.textBoxHasloPowtorz = new System.Windows.Forms.TextBox();
             this.labelPowtorzHaslo = new System.Windows.Forms.Label();
+            this.labelNiepoprawneHaslo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxListaUzytkownikow
@@ -54,6 +55,8 @@
             this.listBoxListaUzytkownikow.Name = "listBoxListaUzytkownikow";
             this.listBoxListaUzytkownikow.Size = new System.Drawing.Size(139, 410);
             this.listBoxListaUzytkownikow.TabIndex = 0;
+            this.listBoxListaUzytkownikow.SelectedIndexChanged += new System.EventHandler(this.listBoxListaUzytkownikow_SelectedIndexChanged);
+            this.listBoxListaUzytkownikow.SelectedValueChanged += new System.EventHandler(this.listBoxListaUzytkownikow_SelectedValueChanged);
             // 
             // labelNazwaUzytkownika
             // 
@@ -68,7 +71,7 @@
             // textBoxNazwaUzytkownika
             // 
             this.textBoxNazwaUzytkownika.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxNazwaUzytkownika.Location = new System.Drawing.Point(370, 52);
+            this.textBoxNazwaUzytkownika.Location = new System.Drawing.Point(369, 52);
             this.textBoxNazwaUzytkownika.Name = "textBoxNazwaUzytkownika";
             this.textBoxNazwaUzytkownika.Size = new System.Drawing.Size(415, 31);
             this.textBoxNazwaUzytkownika.TabIndex = 2;
@@ -164,23 +167,23 @@
             this.labelZmianaHasla.TabIndex = 10;
             this.labelZmianaHasla.Text = "Nowe hasło:";
             // 
-            // textBox1
+            // textBoxHaslo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(370, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(412, 31);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.textBoxHaslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxHaslo.Location = new System.Drawing.Point(370, 130);
+            this.textBoxHaslo.Name = "textBoxHaslo";
+            this.textBoxHaslo.Size = new System.Drawing.Size(412, 31);
+            this.textBoxHaslo.TabIndex = 11;
+            this.textBoxHaslo.UseSystemPasswordChar = true;
             // 
-            // textBox2
+            // textBoxHasloPowtorz
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(370, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(412, 31);
-            this.textBox2.TabIndex = 12;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.textBoxHasloPowtorz.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxHasloPowtorz.Location = new System.Drawing.Point(370, 200);
+            this.textBoxHasloPowtorz.Name = "textBoxHasloPowtorz";
+            this.textBoxHasloPowtorz.Size = new System.Drawing.Size(412, 31);
+            this.textBoxHasloPowtorz.TabIndex = 12;
+            this.textBoxHasloPowtorz.UseSystemPasswordChar = true;
             // 
             // labelPowtorzHaslo
             // 
@@ -193,14 +196,28 @@
             this.labelPowtorzHaslo.Text = "Powtórz hasło:";
             this.labelPowtorzHaslo.Click += new System.EventHandler(this.label1_Click);
             // 
+            // labelNiepoprawneHaslo
+            // 
+            this.labelNiepoprawneHaslo.AutoSize = true;
+            this.labelNiepoprawneHaslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNiepoprawneHaslo.ForeColor = System.Drawing.Color.Red;
+            this.labelNiepoprawneHaslo.Location = new System.Drawing.Point(430, 234);
+            this.labelNiepoprawneHaslo.Name = "labelNiepoprawneHaslo";
+            this.labelNiepoprawneHaslo.Size = new System.Drawing.Size(292, 25);
+            this.labelNiepoprawneHaslo.TabIndex = 14;
+            this.labelNiepoprawneHaslo.Text = "Hasła muszą być takie same!";
+            this.labelNiepoprawneHaslo.Visible = false;
+            this.labelNiepoprawneHaslo.Click += new System.EventHandler(this.labelNiepoprawneHaslo_Click);
+            // 
             // Form_PanelUzytkownikow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelNiepoprawneHaslo);
             this.Controls.Add(this.labelPowtorzHaslo);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxHasloPowtorz);
+            this.Controls.Add(this.textBoxHaslo);
             this.Controls.Add(this.labelZmianaHasla);
             this.Controls.Add(this.buttonUsunUzytkownika);
             this.Controls.Add(this.buttonZmienUzytkownika);
@@ -235,8 +252,9 @@
         private System.Windows.Forms.Button buttonZmienUzytkownika;
         private System.Windows.Forms.Button buttonUsunUzytkownika;
         private System.Windows.Forms.Label labelZmianaHasla;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxHaslo;
+        private System.Windows.Forms.TextBox textBoxHasloPowtorz;
         private System.Windows.Forms.Label labelPowtorzHaslo;
+        private System.Windows.Forms.Label labelNiepoprawneHaslo;
     }
 }
