@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity;
-using System.Linq;
 using System.Windows.Forms;
 using Projekt_PSBD.db;
 
@@ -9,11 +8,15 @@ namespace Projekt_PSBD.Formularze
 {
     public partial class Form_OknoGlowne : Form
     {
+        private BindingList<AutoNaSprzedaz> data;
+        KomisContext ctx = new KomisContext();
+
         public Form_OknoGlowne()
         {
             InitializeComponent();
-            var ctx = new KomisContext();
-            listBoxListaOfert.DataSource = ctx.AutoAutoNaSprzedazs.ToList();
+            ctx.AutoAutoNaSprzedazs.Load();
+            data = ctx.AutoAutoNaSprzedazs.Local.ToBindingList();
+            listBoxListaOfert.DataSource = data;
             listBoxListaOfert.DisplayMember = "TytulOferty";
         }
         //todo : przyjecie wartości z panelu logowania
@@ -44,7 +47,7 @@ namespace Projekt_PSBD.Formularze
             labelIloscMiejs.Text = "Liczba miejsc: " + zaznaczoneAutoNaSprzedaz.IloscMiejs.ToString();
             labelKolorNadwozia.Text = "Kolor: " + zaznaczoneAutoNaSprzedaz.KolorNadwozia.Kolor;
             labelMarka.Text = zaznaczoneAutoNaSprzedaz.Marka.NazwaMarka + " " + zaznaczoneAutoNaSprzedaz.Model.NazwaModel;
-            labelMoc.Text = "Moc: " + zaznaczoneAutoNaSprzedaz.Moc.ToString();
+            labelMoc.Text = "Moc: " + zaznaczoneAutoNaSprzedaz.Moc.ToString() + "KM";
             labelPojemnoscSilnika.Text = "Pojemność silnika: " + zaznaczoneAutoNaSprzedaz.PojemnoscSilnika.Pojemnosc.ToString();
             labelPrzebieg.Text = "Przebieg: " + zaznaczoneAutoNaSprzedaz.Przebieg.ToString();
             labelRodzajNadwozia.Text = "Nadwozie: " + zaznaczoneAutoNaSprzedaz.RodzajNadwozia.Nadwozie;
@@ -52,25 +55,13 @@ namespace Projekt_PSBD.Formularze
             labelRokProdukcji.Text = "Rok produkcji: " + zaznaczoneAutoNaSprzedaz.RokProdukcji.Rok.ToString();
             labelTypSkrzyniBiegow.Text = "Skrzynia biegów: " + zaznaczoneAutoNaSprzedaz.TypSkrzyniBiegow.SkrzyniaBiegow;
             richTextBoxOpis.Text = zaznaczoneAutoNaSprzedaz.Opis;
-
         }
 
-        //pobranie ofert z bazy danych
-        private void aktualizacjaListyOfert()
-        {
-            using (var ctx = new KomisContext())
-            {
-                listBoxListaOfert.DataSource = ctx.AutoAutoNaSprzedazs.ToList();
-                listBoxListaOfert.DisplayMember = "TytulOferty";
-            }
-        }
-
-        //testowa oferta
         private void button1_Click(object sender, EventArgs e)
         {
             AutoNaSprzedaz nowaOferta = new AutoNaSprzedaz()
             {
-                TytulOferty = "Passeratii w LPG",
+                TytulOferty = "Honda szybsza niż wygląda :)",
                 Cena = 1000,
                 IloscMiejs = 4,
                 KolorNadwozia = new KolorNadwozia() { Kolor = "Czarny" },
@@ -85,12 +76,8 @@ namespace Projekt_PSBD.Formularze
                 RodzajPaliwa = new RodzajPaliwa() { Paliwo = "Benzyna + LPG" },
                 RokProdukcji = new RokProdukcji() { Rok = 2013 }
             };
-            using (var ctx = new KomisContext())
-            {
-                ctx.AutoAutoNaSprzedazs.Add(nowaOferta);
-                ctx.SaveChanges();
-            }
-            aktualizacjaListyOfert();
+            ctx.AutoAutoNaSprzedazs.Add(nowaOferta);
+            ctx.SaveChanges();
         }
     }
 }

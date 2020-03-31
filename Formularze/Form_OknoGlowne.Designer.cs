@@ -102,7 +102,7 @@
             // labelRokProdukcji
             // 
             this.labelRokProdukcji.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelRokProdukcji.Location = new System.Drawing.Point(1045, 110);
+            this.labelRokProdukcji.Location = new System.Drawing.Point(885, 214);
             this.labelRokProdukcji.Name = "labelRokProdukcji";
             this.labelRokProdukcji.Size = new System.Drawing.Size(203, 30);
             this.labelRokProdukcji.TabIndex = 6;
@@ -138,7 +138,7 @@
             // labelMoc
             // 
             this.labelMoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelMoc.Location = new System.Drawing.Point(1099, 165);
+            this.labelMoc.Location = new System.Drawing.Point(994, 165);
             this.labelMoc.Name = "labelMoc";
             this.labelMoc.Size = new System.Drawing.Size(149, 30);
             this.labelMoc.TabIndex = 10;
@@ -174,9 +174,9 @@
             // labelTypSkrzyniBiegow
             // 
             this.labelTypSkrzyniBiegow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTypSkrzyniBiegow.Location = new System.Drawing.Point(1011, 214);
+            this.labelTypSkrzyniBiegow.Location = new System.Drawing.Point(885, 265);
             this.labelTypSkrzyniBiegow.Name = "labelTypSkrzyniBiegow";
-            this.labelTypSkrzyniBiegow.Size = new System.Drawing.Size(237, 30);
+            this.labelTypSkrzyniBiegow.Size = new System.Drawing.Size(363, 30);
             this.labelTypSkrzyniBiegow.TabIndex = 14;
             this.labelTypSkrzyniBiegow.Text = "labelTypSkrzyniBiegow";
             // 
@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 677);
+            this.ClientSize = new System.Drawing.Size(1273, 685);
             this.Controls.Add(this.labelCena);
             this.Controls.Add(this.richTextBoxOpis);
             this.Controls.Add(this.labelTypSkrzyniBiegow);
