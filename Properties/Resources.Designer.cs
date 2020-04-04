@@ -79,5 +79,15 @@ namespace Projekt_PSBD.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Photo_Video_Remove_image {
+            get {
+                object obj = ResourceManager.GetObject("Photo Video Remove image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@
         public virtual RodzajNadwozia RodzajNadwozia { get; set; }
         public int IloscMiejs { get; set; }
         public virtual KolorNadwozia KolorNadwozia { get; set; }
-        public virtual TypSkrzyniBiegow TypSkrzyniBiegow { get; set; }
+        //public virtual TypSkrzyniBiegow TypSkrzyniBiegow { get; set; }
         public string Opis { get; set; }
         public int Cena { get; set; }
     }

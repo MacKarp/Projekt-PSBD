@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_OknoGlowne));
             this.listBoxListaOfert = new System.Windows.Forms.ListBox();
             this.buttonPanelUzytkownikow = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.labelTytulOferty = new System.Windows.Forms.Label();
             this.labelMarka = new System.Windows.Forms.Label();
             this.labelRokProdukcji = new System.Windows.Forms.Label();
@@ -45,6 +44,9 @@
             this.labelTypSkrzyniBiegow = new System.Windows.Forms.Label();
             this.richTextBoxOpis = new System.Windows.Forms.RichTextBox();
             this.labelCena = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.buttonDodajAuto = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // listBoxListaOfert
@@ -54,30 +56,20 @@
             this.listBoxListaOfert.ItemHeight = 24;
             this.listBoxListaOfert.Location = new System.Drawing.Point(12, 12);
             this.listBoxListaOfert.Name = "listBoxListaOfert";
-            this.listBoxListaOfert.Size = new System.Drawing.Size(410, 532);
+            this.listBoxListaOfert.Size = new System.Drawing.Size(410, 628);
             this.listBoxListaOfert.TabIndex = 0;
             this.listBoxListaOfert.SelectedIndexChanged += new System.EventHandler(this.listBoxListaOfert_SelectedIndexChanged);
             // 
             // buttonPanelUzytkownikow
             // 
-            this.buttonPanelUzytkownikow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonPanelUzytkownikow.Location = new System.Drawing.Point(1105, 631);
+            this.buttonPanelUzytkownikow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonPanelUzytkownikow.Location = new System.Drawing.Point(1131, 646);
             this.buttonPanelUzytkownikow.Name = "buttonPanelUzytkownikow";
-            this.buttonPanelUzytkownikow.Size = new System.Drawing.Size(143, 34);
+            this.buttonPanelUzytkownikow.Size = new System.Drawing.Size(122, 27);
             this.buttonPanelUzytkownikow.TabIndex = 1;
             this.buttonPanelUzytkownikow.Text = "Użytkownicy";
             this.buttonPanelUzytkownikow.UseVisualStyleBackColor = true;
             this.buttonPanelUzytkownikow.Click += new System.EventHandler(this.buttonPanelUzytkownikow_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(954, 621);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // labelTytulOferty
             // 
@@ -102,7 +94,7 @@
             // labelRokProdukcji
             // 
             this.labelRokProdukcji.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelRokProdukcji.Location = new System.Drawing.Point(885, 214);
+            this.labelRokProdukcji.Location = new System.Drawing.Point(890, 310);
             this.labelRokProdukcji.Name = "labelRokProdukcji";
             this.labelRokProdukcji.Size = new System.Drawing.Size(203, 30);
             this.labelRokProdukcji.TabIndex = 6;
@@ -111,7 +103,7 @@
             // labelPojemnoscSilnika
             // 
             this.labelPojemnoscSilnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPojemnoscSilnika.Location = new System.Drawing.Point(433, 165);
+            this.labelPojemnoscSilnika.Location = new System.Drawing.Point(438, 261);
             this.labelPojemnoscSilnika.Name = "labelPojemnoscSilnika";
             this.labelPojemnoscSilnika.Size = new System.Drawing.Size(229, 30);
             this.labelPojemnoscSilnika.TabIndex = 7;
@@ -120,7 +112,7 @@
             // labelRodzajPaliwa
             // 
             this.labelRodzajPaliwa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelRodzajPaliwa.Location = new System.Drawing.Point(686, 165);
+            this.labelRodzajPaliwa.Location = new System.Drawing.Point(691, 261);
             this.labelRodzajPaliwa.Name = "labelRodzajPaliwa";
             this.labelRodzajPaliwa.Size = new System.Drawing.Size(343, 30);
             this.labelRodzajPaliwa.TabIndex = 8;
@@ -129,7 +121,7 @@
             // labelPrzebieg
             // 
             this.labelPrzebieg.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPrzebieg.Location = new System.Drawing.Point(433, 214);
+            this.labelPrzebieg.Location = new System.Drawing.Point(438, 310);
             this.labelPrzebieg.Name = "labelPrzebieg";
             this.labelPrzebieg.Size = new System.Drawing.Size(202, 30);
             this.labelPrzebieg.TabIndex = 9;
@@ -138,7 +130,7 @@
             // labelMoc
             // 
             this.labelMoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelMoc.Location = new System.Drawing.Point(994, 165);
+            this.labelMoc.Location = new System.Drawing.Point(999, 261);
             this.labelMoc.Name = "labelMoc";
             this.labelMoc.Size = new System.Drawing.Size(149, 30);
             this.labelMoc.TabIndex = 10;
@@ -147,7 +139,7 @@
             // labelRodzajNadwozia
             // 
             this.labelRodzajNadwozia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelRodzajNadwozia.Location = new System.Drawing.Point(646, 265);
+            this.labelRodzajNadwozia.Location = new System.Drawing.Point(651, 361);
             this.labelRodzajNadwozia.Name = "labelRodzajNadwozia";
             this.labelRodzajNadwozia.Size = new System.Drawing.Size(233, 30);
             this.labelRodzajNadwozia.TabIndex = 11;
@@ -156,7 +148,7 @@
             // labelIloscMiejs
             // 
             this.labelIloscMiejs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelIloscMiejs.Location = new System.Drawing.Point(641, 214);
+            this.labelIloscMiejs.Location = new System.Drawing.Point(646, 310);
             this.labelIloscMiejs.Name = "labelIloscMiejs";
             this.labelIloscMiejs.Size = new System.Drawing.Size(172, 30);
             this.labelIloscMiejs.TabIndex = 12;
@@ -165,7 +157,7 @@
             // labelKolorNadwozia
             // 
             this.labelKolorNadwozia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelKolorNadwozia.Location = new System.Drawing.Point(433, 265);
+            this.labelKolorNadwozia.Location = new System.Drawing.Point(438, 361);
             this.labelKolorNadwozia.Name = "labelKolorNadwozia";
             this.labelKolorNadwozia.Size = new System.Drawing.Size(207, 30);
             this.labelKolorNadwozia.TabIndex = 13;
@@ -174,7 +166,7 @@
             // labelTypSkrzyniBiegow
             // 
             this.labelTypSkrzyniBiegow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTypSkrzyniBiegow.Location = new System.Drawing.Point(885, 265);
+            this.labelTypSkrzyniBiegow.Location = new System.Drawing.Point(890, 361);
             this.labelTypSkrzyniBiegow.Name = "labelTypSkrzyniBiegow";
             this.labelTypSkrzyniBiegow.Size = new System.Drawing.Size(363, 30);
             this.labelTypSkrzyniBiegow.TabIndex = 14;
@@ -183,7 +175,7 @@
             // richTextBoxOpis
             // 
             this.richTextBoxOpis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBoxOpis.Location = new System.Drawing.Point(438, 386);
+            this.richTextBoxOpis.Location = new System.Drawing.Point(443, 482);
             this.richTextBoxOpis.Name = "richTextBoxOpis";
             this.richTextBoxOpis.ReadOnly = true;
             this.richTextBoxOpis.Size = new System.Drawing.Size(810, 158);
@@ -193,18 +185,42 @@
             // labelCena
             // 
             this.labelCena.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelCena.Location = new System.Drawing.Point(676, 343);
+            this.labelCena.Location = new System.Drawing.Point(681, 439);
             this.labelCena.Name = "labelCena";
             this.labelCena.Size = new System.Drawing.Size(335, 40);
             this.labelCena.TabIndex = 16;
             this.labelCena.Text = "labelCena";
             this.labelCena.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Image = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
+            this.pictureBox.InitialImage = null;
+            this.pictureBox.Location = new System.Drawing.Point(1004, 110);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(249, 148);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 17;
+            this.pictureBox.TabStop = false;
+            // 
+            // buttonDodajAuto
+            // 
+            this.buttonDodajAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDodajAuto.Location = new System.Drawing.Point(1003, 646);
+            this.buttonDodajAuto.Name = "buttonDodajAuto";
+            this.buttonDodajAuto.Size = new System.Drawing.Size(122, 27);
+            this.buttonDodajAuto.TabIndex = 19;
+            this.buttonDodajAuto.Text = "Dodaj auto";
+            this.buttonDodajAuto.UseVisualStyleBackColor = true;
+            this.buttonDodajAuto.Click += new System.EventHandler(this.buttonDodajAuto_Click);
+            // 
             // Form_OknoGlowne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1273, 685);
+            this.Controls.Add(this.buttonDodajAuto);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.labelCena);
             this.Controls.Add(this.richTextBoxOpis);
             this.Controls.Add(this.labelTypSkrzyniBiegow);
@@ -218,7 +234,6 @@
             this.Controls.Add(this.labelRokProdukcji);
             this.Controls.Add(this.labelMarka);
             this.Controls.Add(this.labelTytulOferty);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPanelUzytkownikow);
             this.Controls.Add(this.listBoxListaOfert);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -227,6 +242,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Katalog ofert - Komis samochodowy \"Janusz\"";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_OknoGlowne_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,7 +251,6 @@
 
         private System.Windows.Forms.ListBox listBoxListaOfert;
         private System.Windows.Forms.Button buttonPanelUzytkownikow;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTytulOferty;
         private System.Windows.Forms.Label labelMarka;
         private System.Windows.Forms.Label labelRokProdukcji;
@@ -249,5 +264,7 @@
         private System.Windows.Forms.Label labelTypSkrzyniBiegow;
         private System.Windows.Forms.RichTextBox richTextBoxOpis;
         private System.Windows.Forms.Label labelCena;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Button buttonDodajAuto;
     }
 }

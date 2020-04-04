@@ -105,7 +105,7 @@ namespace Projekt_PSBD.Formularze
             }
         }
 
-        //todo : edycja uzytkownika
+        //edycja uzytkownika
         private void buttonZmienUzytkownika_Click(object sender, EventArgs e)
         {
             Uzytkownik doEdycjiUzytkownik = (Uzytkownik)listBoxListaUzytkownikow.SelectedItem;

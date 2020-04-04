@@ -16,7 +16,7 @@ namespace Projekt_PSBD.db
             this.HasRequired(s => s.RodzajNadwozia);
             this.Property(s => s.IloscMiejs).IsRequired();
             this.HasRequired(s => s.KolorNadwozia);
-            this.HasRequired(s => s.TypSkrzyniBiegow);
+            //this.HasRequired(s => s.TypSkrzyniBiegow);
             this.Property(s => s.Opis).IsRequired();
             this.Property(s => s.Cena).IsRequired();
         }

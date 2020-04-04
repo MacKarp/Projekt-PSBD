@@ -22,7 +22,7 @@ namespace Projekt_PSBD.db
         public DbSet<RodzajPaliwa> RodzajPaliwas { get; set; }
         public DbSet<RodzajNadwozia> RodzajNadwozias { get; set; }
         public DbSet<KolorNadwozia>KolorNadwozias { get; set; }
-        public DbSet<TypSkrzyniBiegow> TypSkrzyniBiegows { get; set; }
+        //public DbSet<TypSkrzyniBiegow> TypSkrzyniBiegows { get; set; }
         public DbSet<AutoNaSprzedaz> AutoAutoNaSprzedazs { get; set; }
         public DbSet<Uzytkownik> Uzytkowniks { get; set; }
     }
