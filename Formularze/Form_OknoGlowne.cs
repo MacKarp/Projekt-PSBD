@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data.Entity;
+using System.Globalization;
 using System.Windows.Forms;
 using Projekt_PSBD.db;
 
@@ -43,18 +44,19 @@ namespace Projekt_PSBD.Formularze
         {
             AutoNaSprzedaz zaznaczoneAutoNaSprzedaz = (AutoNaSprzedaz)listBoxListaOfert.SelectedItem;
             labelTytulOferty.Text = zaznaczoneAutoNaSprzedaz.TytulOferty;
-            labelCena.Text = "Cena: " + zaznaczoneAutoNaSprzedaz.Cena.ToString();
-            labelIloscMiejs.Text = "Liczba miejsc: " + zaznaczoneAutoNaSprzedaz.IloscMiejs.ToString();
+            labelCena.Text = "Cena: " + zaznaczoneAutoNaSprzedaz.Cena;
+            labelIloscMiejs.Text = "Liczba miejsc: " + zaznaczoneAutoNaSprzedaz.IloscMiejs;
             labelKolorNadwozia.Text = "Kolor: " + zaznaczoneAutoNaSprzedaz.KolorNadwozia.Kolor;
-            //labelMarka.Text = zaznaczoneAutoNaSprzedaz.Marka.NazwaMarka + " " + zaznaczoneAutoNaSprzedaz.Model.NazwaModel;
+            labelMarka.Text = zaznaczoneAutoNaSprzedaz.Marka.NazwaMarka + " " + zaznaczoneAutoNaSprzedaz.Model.NazwaModel;
             labelMoc.Text = "Moc: " + zaznaczoneAutoNaSprzedaz.Moc.ToString() + "KM";
-            labelPojemnoscSilnika.Text = "Pojemność silnika: " + zaznaczoneAutoNaSprzedaz.PojemnoscSilnika.Pojemnosc.ToString();
-            labelPrzebieg.Text = "Przebieg: " + zaznaczoneAutoNaSprzedaz.Przebieg.ToString();
+            labelPojemnoscSilnika.Text = "Pojemność silnika: " + zaznaczoneAutoNaSprzedaz.PojemnoscSilnika.Pojemnosc.ToString(CultureInfo.InvariantCulture);
+            labelPrzebieg.Text = "Przebieg: " + zaznaczoneAutoNaSprzedaz.Przebieg;
             labelRodzajNadwozia.Text = "Nadwozie: " + zaznaczoneAutoNaSprzedaz.RodzajNadwozia.Nadwozie;
             labelRodzajPaliwa.Text = "Rodzaj paliwa: " + zaznaczoneAutoNaSprzedaz.RodzajPaliwa.Paliwo;
-            labelRokProdukcji.Text = "Rok produkcji: " + zaznaczoneAutoNaSprzedaz.RokProdukcji.Rok.ToString();
+            labelRokProdukcji.Text = "Rok produkcji: " + zaznaczoneAutoNaSprzedaz.RokProdukcji.Rok;
             //labelTypSkrzyniBiegow.Text = "Skrzynia biegów: " + zaznaczoneAutoNaSprzedaz.TypSkrzyniBiegow.SkrzyniaBiegow;
             richTextBoxOpis.Text = zaznaczoneAutoNaSprzedaz.Opis;
+            pictureBox.ImageLocation = zaznaczoneAutoNaSprzedaz.Pic1;
         }
 
         //todo : otwieranie okna dodania auta (poziom sprzedawca i kierownik)

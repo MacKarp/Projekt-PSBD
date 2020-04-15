@@ -2,7 +2,9 @@
 using System.ComponentModel;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
 using Projekt_PSBD.db;
 
@@ -10,6 +12,9 @@ namespace Projekt_PSBD.Formularze
 {
     public partial class Form_DodajAuto : Form
     {
+        private string defaultImage;
+        private string skrzynia = string.Empty;
+
         private BindingList<Marka> markaBindingList;
         private BindingList<Model> modelBindingList;
         private BindingList<RodzajNadwozia> rodzajNadwoziBindingList;
@@ -24,6 +29,7 @@ namespace Projekt_PSBD.Formularze
         {
             InitializeComponent();
 
+            //Wczytanie bazy danych
             _ctx.Markas.Load();
             markaBindingList = _ctx.Markas.Local.ToBindingList();
             listBoxMarkaAuta.DataSource = markaBindingList;
@@ -58,6 +64,22 @@ namespace Projekt_PSBD.Formularze
             rokProdukcjiBindingList = _ctx.RokProdukcjis.Local.ToBindingList();
             listBoxRokProdukcji.DataSource = rokProdukcjiBindingList;
             listBoxRokProdukcji.DisplayMember = "Rok";
+
+            defaultImage = Directory.GetCurrentDirectory() + @"\img\Default.png";
+
+            //Wczytywanie i ustawianie domyślnbego zdjęcia
+            if (File.Exists(defaultImage))
+            {
+                Debug.WriteLine("Def zdjecie istnieje");
+                pictureBoxZdjecie1.ImageLocation = defaultImage;
+                pictureBoxZdjecie2.ImageLocation = defaultImage;
+                pictureBoxZdjecie3.ImageLocation = defaultImage;
+                pictureBoxZdjecie4.ImageLocation = defaultImage;
+            }
+            else
+            {
+                Debug.WriteLine("Plik nie istnieje");
+            }
         }
 
         private void Form_DodajAuto_FormClosing(object sender, FormClosingEventArgs e)
@@ -279,6 +301,7 @@ namespace Projekt_PSBD.Formularze
 
         private void buttonDodajOferte_Click(object sender, EventArgs e)
         {
+            //Tworzenie oferty
             AutoNaSprzedaz autoNaSprzedaz = new AutoNaSprzedaz();
             autoNaSprzedaz.TytulOferty = textBoxTytulOferty.Text;
             autoNaSprzedaz.Przebieg = int.Parse(textBoxPrzebieg.Text);
@@ -293,9 +316,90 @@ namespace Projekt_PSBD.Formularze
             autoNaSprzedaz.RodzajNadwozia = (RodzajNadwozia)listBoxRodzajNadwozia.SelectedItem;
             autoNaSprzedaz.RodzajPaliwa = (RodzajPaliwa)listBoxRodzajPaliwa.SelectedItem;
             autoNaSprzedaz.RokProdukcji = (RokProdukcji)listBoxRokProdukcji.SelectedItem;
-            //autoNaSprzedaz.TypSkrzyniBiegow.SkrzyniaBiegow = "Manualna";
+            autoNaSprzedaz.TypSkrzyniBiegow = skrzynia;
+            autoNaSprzedaz.Pic1 = pictureBoxZdjecie1.ImageLocation;
+            autoNaSprzedaz.Pic2 = pictureBoxZdjecie2.ImageLocation;
+            autoNaSprzedaz.Pic3 = pictureBoxZdjecie3.ImageLocation;
+            autoNaSprzedaz.Pic4 = pictureBoxZdjecie4.ImageLocation;
+
+            //Zapisywanie w bazie danych
             _ctx.AutoAutoNaSprzedazs.Add(autoNaSprzedaz);
             _ctx.SaveChanges();
+        }
+
+        //Obsluga pol ze zdjęciami
+        private void buttonDodajZdjecie1_Click(object sender, EventArgs e)
+        {
+            pictureBoxZdjecie1.ImageLocation = WyborZdjecia();
+        }
+
+        private void buttonUsunZdjecie1_Click(object sender, EventArgs e)
+        {
+            pictureBoxZdjecie1.ImageLocation = defaultImage;
+        }
+
+        private void buttonDodajZdjecie2_Click(object sender, EventArgs e)
+        {
+            pictureBoxZdjecie2.ImageLocation = WyborZdjecia();
+        }
+
+        private void buttonUsunZdjecie2_Click(object sender, EventArgs e)
+        {
+            pictureBoxZdjecie2.ImageLocation = defaultImage;
+
+        }
+
+        private void buttonDodajZdjecie3_Click(object sender, EventArgs e)
+        {
+            pictureBoxZdjecie3.ImageLocation = WyborZdjecia();
+        }
+
+        private void buttonUsunZdjecie3_Click(object sender, EventArgs e)
+        {
+            pictureBoxZdjecie3.ImageLocation = defaultImage;
+
+        }
+
+        private void buttonDodajZdjecie4_Click(object sender, EventArgs e)
+        {
+            pictureBoxZdjecie4.ImageLocation = WyborZdjecia();
+        }
+
+        private void buttonUsunZdjecie4_Click(object sender, EventArgs e)
+        {
+            pictureBoxZdjecie4.ImageLocation = defaultImage;
+        }
+
+        private string WyborZdjecia()
+        {
+
+            string targetImagePath = Directory.GetCurrentDirectory() + @"\img\";
+            string uniqueFileName = defaultImage;
+
+            //wybiera zdjęcie
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            openFileDialog.Filter = "Zdjęcia (*.jpg, *jpeg, *.bmp,*.png )|*.jpg;*.jpeg;*.bmp;*.png";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string sourceImagePath = openFileDialog.FileName;
+                //Kopiuje zdjęcie do katalogu aplikacji: /img/ i nadaje mu uniklną nazwe
+                uniqueFileName = targetImagePath + string.Format(@"{0}" + Path.GetExtension(openFileDialog.FileName), DateTime.Now.Ticks);
+                File.Copy(sourceImagePath, uniqueFileName);
+            }
+            //zwraca sciezka dostepu do pliku
+            return uniqueFileName;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            skrzynia = "Automatyczna";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            skrzynia = "Manualna";
         }
     }
 }

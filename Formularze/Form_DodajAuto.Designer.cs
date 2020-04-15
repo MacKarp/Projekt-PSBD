@@ -96,6 +96,9 @@
             this.buttonUsunZdjecie4 = new System.Windows.Forms.Button();
             this.buttonDodajZdjecie4 = new System.Windows.Forms.Button();
             this.buttonDodajOferte = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZdjecie1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZdjecie3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZdjecie2)).BeginInit();
@@ -619,7 +622,6 @@
             // 
             // pictureBoxZdjecie1
             // 
-            this.pictureBoxZdjecie1.Image = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBoxZdjecie1.Location = new System.Drawing.Point(1043, 221);
             this.pictureBoxZdjecie1.Name = "pictureBoxZdjecie1";
             this.pictureBoxZdjecie1.Size = new System.Drawing.Size(100, 50);
@@ -629,7 +631,6 @@
             // 
             // pictureBoxZdjecie3
             // 
-            this.pictureBoxZdjecie3.Image = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBoxZdjecie3.Location = new System.Drawing.Point(1042, 308);
             this.pictureBoxZdjecie3.Name = "pictureBoxZdjecie3";
             this.pictureBoxZdjecie3.Size = new System.Drawing.Size(100, 50);
@@ -639,7 +640,6 @@
             // 
             // pictureBoxZdjecie2
             // 
-            this.pictureBoxZdjecie2.Image = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBoxZdjecie2.Location = new System.Drawing.Point(1152, 220);
             this.pictureBoxZdjecie2.Name = "pictureBoxZdjecie2";
             this.pictureBoxZdjecie2.Size = new System.Drawing.Size(100, 50);
@@ -649,7 +649,6 @@
             // 
             // pictureBoxZdjecie4
             // 
-            this.pictureBoxZdjecie4.Image = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBoxZdjecie4.Location = new System.Drawing.Point(1152, 309);
             this.pictureBoxZdjecie4.Name = "pictureBoxZdjecie4";
             this.pictureBoxZdjecie4.Size = new System.Drawing.Size(100, 50);
@@ -665,6 +664,7 @@
             this.buttonDodajZdjecie1.TabIndex = 63;
             this.buttonDodajZdjecie1.Text = "Dodaj";
             this.buttonDodajZdjecie1.UseVisualStyleBackColor = true;
+            this.buttonDodajZdjecie1.Click += new System.EventHandler(this.buttonDodajZdjecie1_Click);
             // 
             // buttonUsunZdjecie1
             // 
@@ -674,6 +674,7 @@
             this.buttonUsunZdjecie1.TabIndex = 64;
             this.buttonUsunZdjecie1.Text = "Usuń";
             this.buttonUsunZdjecie1.UseVisualStyleBackColor = true;
+            this.buttonUsunZdjecie1.Click += new System.EventHandler(this.buttonUsunZdjecie1_Click);
             // 
             // buttonUsunZdjecie2
             // 
@@ -683,6 +684,7 @@
             this.buttonUsunZdjecie2.TabIndex = 66;
             this.buttonUsunZdjecie2.Text = "Usuń";
             this.buttonUsunZdjecie2.UseVisualStyleBackColor = true;
+            this.buttonUsunZdjecie2.Click += new System.EventHandler(this.buttonUsunZdjecie2_Click);
             // 
             // buttonDodajZdjecie2
             // 
@@ -692,6 +694,7 @@
             this.buttonDodajZdjecie2.TabIndex = 65;
             this.buttonDodajZdjecie2.Text = "Dodaj";
             this.buttonDodajZdjecie2.UseVisualStyleBackColor = true;
+            this.buttonDodajZdjecie2.Click += new System.EventHandler(this.buttonDodajZdjecie2_Click);
             // 
             // buttonUsunZdjecie3
             // 
@@ -701,6 +704,7 @@
             this.buttonUsunZdjecie3.TabIndex = 68;
             this.buttonUsunZdjecie3.Text = "Usuń";
             this.buttonUsunZdjecie3.UseVisualStyleBackColor = true;
+            this.buttonUsunZdjecie3.Click += new System.EventHandler(this.buttonUsunZdjecie3_Click);
             // 
             // buttonDodajZdjecie3
             // 
@@ -710,6 +714,7 @@
             this.buttonDodajZdjecie3.TabIndex = 67;
             this.buttonDodajZdjecie3.Text = "Dodaj";
             this.buttonDodajZdjecie3.UseVisualStyleBackColor = true;
+            this.buttonDodajZdjecie3.Click += new System.EventHandler(this.buttonDodajZdjecie3_Click);
             // 
             // buttonUsunZdjecie4
             // 
@@ -719,6 +724,7 @@
             this.buttonUsunZdjecie4.TabIndex = 70;
             this.buttonUsunZdjecie4.Text = "Usuń";
             this.buttonUsunZdjecie4.UseVisualStyleBackColor = true;
+            this.buttonUsunZdjecie4.Click += new System.EventHandler(this.buttonUsunZdjecie4_Click);
             // 
             // buttonDodajZdjecie4
             // 
@@ -728,6 +734,7 @@
             this.buttonDodajZdjecie4.TabIndex = 69;
             this.buttonDodajZdjecie4.Text = "Dodaj";
             this.buttonDodajZdjecie4.UseVisualStyleBackColor = true;
+            this.buttonDodajZdjecie4.Click += new System.EventHandler(this.buttonDodajZdjecie4_Click);
             // 
             // buttonDodajOferte
             // 
@@ -740,11 +747,48 @@
             this.buttonDodajOferte.UseVisualStyleBackColor = true;
             this.buttonDodajOferte.Click += new System.EventHandler(this.buttonDodajOferte_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(809, 343);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 20);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Skrzynia biegów:";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(942, 343);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(92, 17);
+            this.radioButton1.TabIndex = 73;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Automatyczna";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(942, 364);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(72, 17);
+            this.radioButton2.TabIndex = 74;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Manualna";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
             // Form_DodajAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonDodajOferte);
             this.Controls.Add(this.buttonUsunZdjecie4);
             this.Controls.Add(this.buttonDodajZdjecie4);
@@ -893,5 +937,8 @@
         private System.Windows.Forms.Button buttonUsunZdjecie4;
         private System.Windows.Forms.Button buttonDodajZdjecie4;
         private System.Windows.Forms.Button buttonDodajOferte;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

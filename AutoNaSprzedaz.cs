@@ -15,7 +15,12 @@
         public int IloscMiejs { get; set; }
         public virtual KolorNadwozia KolorNadwozia { get; set; }
         //public virtual TypSkrzyniBiegow TypSkrzyniBiegow { get; set; }
+        public string TypSkrzyniBiegow { get; set; }
         public string Opis { get; set; }
         public int Cena { get; set; }
+        public string Pic1 { get; set; }
+        public string Pic2 { get; set; }
+        public string Pic3 { get; set; }
+        public string Pic4 { get; set; }
     }
 }

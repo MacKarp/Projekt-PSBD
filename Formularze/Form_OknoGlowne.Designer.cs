@@ -83,13 +83,13 @@
             // 
             // labelMarka
             // 
-            this.labelMarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelMarka.Location = new System.Drawing.Point(686, 110);
+            this.labelMarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelMarka.Location = new System.Drawing.Point(443, 110);
             this.labelMarka.Name = "labelMarka";
-            this.labelMarka.Size = new System.Drawing.Size(314, 30);
+            this.labelMarka.Size = new System.Drawing.Size(555, 54);
             this.labelMarka.TabIndex = 4;
             this.labelMarka.Text = "labelMarka";
-            this.labelMarka.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelMarka.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRokProdukcji
             // 
