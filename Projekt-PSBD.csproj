@@ -114,6 +114,12 @@
     <Compile Include="Formularze\Form_PanelUzytkownikow.Designer.cs">
       <DependentUpon>Form_PanelUzytkownikow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularze\Form_PrzegladarkaZdjec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularze\Form_PrzegladarkaZdjec.Designer.cs">
+      <DependentUpon>Form_PrzegladarkaZdjec.cs</DependentUpon>
+    </Compile>
     <Compile Include="KolorNadwozia.cs" />
     <Compile Include="db\KomisContext.cs" />
     <Compile Include="db\KomisDbInitializer.cs" />
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularze\Form_PanelUzytkownikow.resx">
       <DependentUpon>Form_PanelUzytkownikow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularze\Form_PrzegladarkaZdjec.resx">
+      <DependentUpon>Form_PrzegladarkaZdjec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularze\Panel_logowania.resx">
       <DependentUpon>Panel_logowania.cs</DependentUpon>

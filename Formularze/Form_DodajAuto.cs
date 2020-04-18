@@ -106,8 +106,6 @@ namespace Projekt_PSBD.Formularze
             doEdycji.NazwaMarka = textBoxMarka.Text;
             _ctx.Markas.AddOrUpdate(doEdycji);
             _ctx.SaveChanges();
-            // todo : wymusić update edytowanego elementu na listBoxMarkaAuta
-
         }
 
         private void buttonDodajMarka_Click(object sender, EventArgs e)
@@ -138,7 +136,6 @@ namespace Projekt_PSBD.Formularze
             doEdycji.NazwaModel = textBoxModel.Text;
             _ctx.Models.AddOrUpdate(doEdycji);
             _ctx.SaveChanges();
-            // todo : wymusić update edytowanego elementu na listBoxModelAuta
         }
 
         private void buttonModelDodaj_Click(object sender, EventArgs e)
@@ -168,7 +165,6 @@ namespace Projekt_PSBD.Formularze
             doEdycji.Nadwozie = textBoxRodzajNadwozia.Text;
             _ctx.RodzajNadwozias.AddOrUpdate(doEdycji);
             _ctx.SaveChanges();
-            // todo : wymusić update edytowanego elementu na listBoxModelAuta
         }
 
         private void buttonDodajRodzajNadwozia_Click(object sender, EventArgs e)
@@ -198,7 +194,6 @@ namespace Projekt_PSBD.Formularze
             doEdycji.Kolor = textBoxKolor.Text;
             _ctx.KolorNadwozias.AddOrUpdate(doEdycji);
             _ctx.SaveChanges();
-            // todo : wymusić update edytowanego elementu na listBoxModelAuta
         }
 
         private void buttonKolorDodaj_Click(object sender, EventArgs e)
@@ -228,7 +223,6 @@ namespace Projekt_PSBD.Formularze
             doEdycji.Paliwo = textBoxRodzajPaliwa.Text;
             _ctx.RodzajPaliwas.AddOrUpdate(doEdycji);
             _ctx.SaveChanges();
-            // todo : wymusić update edytowanego elementu na listBoxModelAuta
         }
 
         private void buttonDodajRodzajPaliwa_Click(object sender, EventArgs e)
@@ -258,7 +252,6 @@ namespace Projekt_PSBD.Formularze
             doEdycji.Pojemnosc = double.Parse(textBoxPojemnoscSilnika.Text, CultureInfo.InvariantCulture);
             _ctx.PojemnoscSilnikas.AddOrUpdate(doEdycji);
             _ctx.SaveChanges();
-            // todo : wymusić update edytowanego elementu na listBoxModelAuta
         }
 
         private void buttonDodajPojemnoscSilnika_Click(object sender, EventArgs e)
@@ -288,7 +281,6 @@ namespace Projekt_PSBD.Formularze
             doEdycji.Rok = int.Parse(textBoxRokProdukcji.Text);
             _ctx.RokProdukcjis.AddOrUpdate(doEdycji);
             _ctx.SaveChanges();
-            // todo : wymusić update edytowanego elementu na listBoxModelAuta
         }
 
         private void buttonDodajRokProdukcji_Click(object sender, EventArgs e)
@@ -301,30 +293,38 @@ namespace Projekt_PSBD.Formularze
 
         private void buttonDodajOferte_Click(object sender, EventArgs e)
         {
-            //Tworzenie oferty
-            AutoNaSprzedaz autoNaSprzedaz = new AutoNaSprzedaz();
-            autoNaSprzedaz.TytulOferty = textBoxTytulOferty.Text;
-            autoNaSprzedaz.Przebieg = int.Parse(textBoxPrzebieg.Text);
-            autoNaSprzedaz.Moc = int.Parse(textBoxMoc.Text);
-            autoNaSprzedaz.IloscMiejs = int.Parse(textBoxIloscMiejsc.Text);
-            autoNaSprzedaz.Opis = richTextBoxOpis.Text;
-            autoNaSprzedaz.Cena = int.Parse(textBoxCena.Text);
-            autoNaSprzedaz.KolorNadwozia = (KolorNadwozia)listBoxKolor.SelectedItem;
-            autoNaSprzedaz.Marka = (Marka)listBoxMarkaAuta.SelectedItem;
-            autoNaSprzedaz.Model = (Model)listBoxModelAuta.SelectedItem;
-            autoNaSprzedaz.PojemnoscSilnika = (PojemnoscSilnika)listBoxPojemnoscSilnika.SelectedItem;
-            autoNaSprzedaz.RodzajNadwozia = (RodzajNadwozia)listBoxRodzajNadwozia.SelectedItem;
-            autoNaSprzedaz.RodzajPaliwa = (RodzajPaliwa)listBoxRodzajPaliwa.SelectedItem;
-            autoNaSprzedaz.RokProdukcji = (RokProdukcji)listBoxRokProdukcji.SelectedItem;
-            autoNaSprzedaz.TypSkrzyniBiegow = skrzynia;
-            autoNaSprzedaz.Pic1 = pictureBoxZdjecie1.ImageLocation;
-            autoNaSprzedaz.Pic2 = pictureBoxZdjecie2.ImageLocation;
-            autoNaSprzedaz.Pic3 = pictureBoxZdjecie3.ImageLocation;
-            autoNaSprzedaz.Pic4 = pictureBoxZdjecie4.ImageLocation;
+            try
+            {
+                //Tworzenie oferty
+                AutoNaSprzedaz autoNaSprzedaz = new AutoNaSprzedaz();
+                autoNaSprzedaz.TytulOferty = textBoxTytulOferty.Text;
+                autoNaSprzedaz.Przebieg = int.Parse(textBoxPrzebieg.Text);
+                autoNaSprzedaz.Moc = int.Parse(textBoxMoc.Text);
+                autoNaSprzedaz.IloscMiejs = int.Parse(textBoxIloscMiejsc.Text);
+                autoNaSprzedaz.Opis = richTextBoxOpis.Text;
+                autoNaSprzedaz.Cena = int.Parse(textBoxCena.Text);
+                autoNaSprzedaz.KolorNadwozia = (KolorNadwozia)listBoxKolor.SelectedItem;
+                autoNaSprzedaz.Marka = (Marka)listBoxMarkaAuta.SelectedItem;
+                autoNaSprzedaz.Model = (Model)listBoxModelAuta.SelectedItem;
+                autoNaSprzedaz.PojemnoscSilnika = (PojemnoscSilnika)listBoxPojemnoscSilnika.SelectedItem;
+                autoNaSprzedaz.RodzajNadwozia = (RodzajNadwozia)listBoxRodzajNadwozia.SelectedItem;
+                autoNaSprzedaz.RodzajPaliwa = (RodzajPaliwa)listBoxRodzajPaliwa.SelectedItem;
+                autoNaSprzedaz.RokProdukcji = (RokProdukcji)listBoxRokProdukcji.SelectedItem;
+                autoNaSprzedaz.TypSkrzyniBiegow = skrzynia;
+                autoNaSprzedaz.Pic1 = pictureBoxZdjecie1.ImageLocation;
+                autoNaSprzedaz.Pic2 = pictureBoxZdjecie2.ImageLocation;
+                autoNaSprzedaz.Pic3 = pictureBoxZdjecie3.ImageLocation;
+                autoNaSprzedaz.Pic4 = pictureBoxZdjecie4.ImageLocation;
 
-            //Zapisywanie w bazie danych
-            _ctx.AutoAutoNaSprzedazs.Add(autoNaSprzedaz);
-            _ctx.SaveChanges();
+                //Zapisywanie w bazie danych
+                _ctx.AutoAutoNaSprzedazs.Add(autoNaSprzedaz);
+                _ctx.SaveChanges();
+                MessageBox.Show("Pomyślnie dodano ofertę sprzedaży!");
+            }
+            catch
+            {
+                MessageBox.Show("Coś poszło nie tak.");
+            }
         }
 
         //Obsluga pol ze zdjęciami

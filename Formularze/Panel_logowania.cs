@@ -98,9 +98,11 @@ namespace Projekt_PSBD.Formularze
                         {
                             Debug.WriteLine("Logowanie poprawne!");
                             labelErrorLogin.Visible = false;
-
-                            //todo : przekazywanie danych logowania
                             Form_OknoGlowne oknoGlowne = new Form_OknoGlowne();
+
+                            Debug.WriteLine("Przed przekazaniem: " + VARIABLE.PoziomDostepuUzytkownika);
+                            oknoGlowne.PoziomLogowania = VARIABLE.PoziomDostepuUzytkownika;
+                            Debug.WriteLine("Po przekazaniu: " + oknoGlowne.PoziomLogowania);
                             oknoGlowne.Show(this);
                             this.Hide();
                             break;

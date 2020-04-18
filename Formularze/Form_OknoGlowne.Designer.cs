@@ -202,6 +202,7 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 17;
             this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // buttonDodajAuto
             // 
@@ -242,6 +243,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Katalog ofert - Komis samochodowy \"Janusz\"";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_OknoGlowne_FormClosing);
+            this.Load += new System.EventHandler(this.Form_OknoGlowne_Load);
+            this.VisibleChanged += new System.EventHandler(this.Form_OknoGlowne_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
