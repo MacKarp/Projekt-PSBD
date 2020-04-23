@@ -51,7 +51,7 @@ namespace Projekt_PSBD.Formularze
                     var admin = new Uzytkownik();
                     admin.NazwaUzytkownia = "admin";
                     admin.ustawHasloUzytkownika("admin");
-                    admin.PoziomDostepuUzytkownika = 0;
+                    admin.PoziomDostepuUzytkownika = 2;
                     ctx.Uzytkowniks.Add(admin);
                     ctx.SaveChanges();
                 }
@@ -61,7 +61,7 @@ namespace Projekt_PSBD.Formularze
                     var guest = new Uzytkownik();
                     guest.NazwaUzytkownia = "guest";
                     guest.ustawHasloUzytkownika("guest");
-                    guest.PoziomDostepuUzytkownika = 9;
+                    guest.PoziomDostepuUzytkownika = 0;
                     ctx.Uzytkowniks.Add(guest);
                     ctx.SaveChanges();
                 }
