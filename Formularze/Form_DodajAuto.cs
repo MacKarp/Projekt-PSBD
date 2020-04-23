@@ -65,7 +65,8 @@ namespace Projekt_PSBD.Formularze
             listBoxRokProdukcji.DataSource = rokProdukcjiBindingList;
             listBoxRokProdukcji.DisplayMember = "Rok";
 
-            defaultImage = Directory.GetCurrentDirectory() + @"\img\Default.png";
+            //defaultImage = Directory.GetCurrentDirectory() + @"\img\Default.png";
+            defaultImage = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Komis Samochodowy - Janusz\img\Default.png";
 
             //Wczytywanie i ustawianie domyślnbego zdjęcia
             if (File.Exists(defaultImage))
@@ -373,18 +374,18 @@ namespace Projekt_PSBD.Formularze
         private string WyborZdjecia()
         {
 
-            string targetImagePath = Directory.GetCurrentDirectory() + @"\img\";
+            string targetImagePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Komis Samochodowy - Janusz\img\";
             string uniqueFileName = defaultImage;
 
             //wybiera zdjęcie
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            openFileDialog.Filter = "Zdjęcia (*.jpg, *jpeg, *.bmp,*.png )|*.jpg;*.jpeg;*.bmp;*.png";
+            openFileDialog.Filter = "Zdjęcia(*.jpg, *jpeg, *.bmp, *.png) | *.jpg; *.jpeg; *.bmp; *.png";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string sourceImagePath = openFileDialog.FileName;
-                //Kopiuje zdjęcie do katalogu aplikacji: /img/ i nadaje mu uniklną nazwe
+                //Kopiuje zdjęcie do katalogu użytkownika: Dokumenty\Komis Samochodowy - Janusz\img\ i nadaje mu uniklną nazwe
                 uniqueFileName = targetImagePath + string.Format(@"{0}" + Path.GetExtension(openFileDialog.FileName), DateTime.Now.Ticks);
                 File.Copy(sourceImagePath, uniqueFileName);
             }

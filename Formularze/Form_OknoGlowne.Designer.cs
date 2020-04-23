@@ -46,6 +46,7 @@
             this.labelCena = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.buttonDodajAuto = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,7 +195,7 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.ErrorImage = global::Projekt_PSBD.Properties.Resources.person_icon;
+            this.pictureBox.ErrorImage = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBox.Image = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBox.InitialImage = null;
             this.pictureBox.Location = new System.Drawing.Point(1004, 110);
@@ -270,5 +271,6 @@
         private System.Windows.Forms.Label labelCena;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button buttonDodajAuto;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
