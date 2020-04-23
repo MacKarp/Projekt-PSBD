@@ -12,6 +12,7 @@ namespace Projekt_PSBD.Formularze
     {
         private BindingList<AutoNaSprzedaz> data;
         private readonly KomisContext _ctx = new KomisContext();
+
         public int PoziomLogowania;
 
         public Form_OknoGlowne()
