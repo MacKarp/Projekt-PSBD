@@ -194,6 +194,7 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.ErrorImage = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBox.Image = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBox.InitialImage = null;
             this.pictureBox.Location = new System.Drawing.Point(1004, 110);

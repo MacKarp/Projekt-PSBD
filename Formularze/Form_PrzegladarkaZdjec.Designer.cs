@@ -41,6 +41,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ErrorImage = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(610, 320);
@@ -50,6 +51,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.ErrorImage = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBox2.Location = new System.Drawing.Point(12, 349);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(610, 320);
@@ -59,6 +61,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.ErrorImage = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBox3.Location = new System.Drawing.Point(642, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(610, 320);
@@ -68,6 +71,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.ErrorImage = global::Projekt_PSBD.Properties.Resources.Photo_Video_Remove_image;
             this.pictureBox4.Location = new System.Drawing.Point(642, 349);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(610, 320);
