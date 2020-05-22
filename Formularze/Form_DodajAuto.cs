@@ -66,7 +66,7 @@ namespace Projekt_PSBD.Formularze
             listBoxRokProdukcji.DisplayMember = "Rok";
 
             //defaultImage = Directory.GetCurrentDirectory() + @"\img\Default.png";
-            defaultImage = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Komis Samochodowy - Janusz\img\Default.png";
+            defaultImage = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments) + @"\Komis Samochodowy - Janusz\img\Default.png";
 
             //Wczytywanie i ustawianie domyślnbego zdjęcia
             if (File.Exists(defaultImage))
@@ -374,7 +374,7 @@ namespace Projekt_PSBD.Formularze
         private string WyborZdjecia()
         {
 
-            string targetImagePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Komis Samochodowy - Janusz\img\";
+            string targetImagePath = Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments) + @"\Komis Samochodowy - Janusz\img\";
             string uniqueFileName = defaultImage;
 
             //wybiera zdjęcie
@@ -385,7 +385,7 @@ namespace Projekt_PSBD.Formularze
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string sourceImagePath = openFileDialog.FileName;
-                //Kopiuje zdjęcie do katalogu użytkownika: Dokumenty\Komis Samochodowy - Janusz\img\ i nadaje mu uniklną nazwe
+                //Kopiuje zdjęcie do katalogu common documents\Komis Samochodowy - Janusz\img\ i nadaje mu uniklną nazwe
                 uniqueFileName = targetImagePath + string.Format(@"{0}" + Path.GetExtension(openFileDialog.FileName), DateTime.Now.Ticks);
                 File.Copy(sourceImagePath, uniqueFileName);
             }
@@ -401,6 +401,11 @@ namespace Projekt_PSBD.Formularze
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             skrzynia = "Manualna";
+        }
+
+        private void pictureBoxZdjecie1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
