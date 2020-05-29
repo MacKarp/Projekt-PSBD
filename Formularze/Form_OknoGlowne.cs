@@ -21,6 +21,7 @@ namespace Projekt_PSBD.Formularze
 
             buttonPanelUzytkownikow.Visible = false;
             buttonDodajAuto.Visible = false;
+            buttonUsun.Visible = false;
 
         }
 
@@ -64,6 +65,14 @@ namespace Projekt_PSBD.Formularze
             dodajAuto.Show(this);
             this.Hide();
         }
+        //Usuwanie w bazie danych
+        private void buttonUsun_Click(object sender, EventArgs e)
+        {
+            AutoNaSprzedaz zaznaczoneAutoNaSprzedaz = (AutoNaSprzedaz)listBoxListaOfert.SelectedItem;
+            _ctx.AutoAutoNaSprzedazs.Remove(zaznaczoneAutoNaSprzedaz);
+            _ctx.SaveChanges();
+            MessageBox.Show("Pomyślnie usunięto ofertę sprzedaży!");
+        }
 
         private void Form_OknoGlowne_Load(object sender, EventArgs e)
         {
@@ -77,11 +86,13 @@ namespace Projekt_PSBD.Formularze
                 case 1:
                     Debug.WriteLine("switch 1");
                     buttonDodajAuto.Visible = true;
+                    buttonUsun.Visible = true;
                     break;
                 case 2:
                     Debug.WriteLine("switch 2");
                     buttonPanelUzytkownikow.Visible = true;
                     buttonDodajAuto.Visible = true;
+                    buttonUsun.Visible = true;
                     break;
             }
 
@@ -108,5 +119,6 @@ namespace Projekt_PSBD.Formularze
             listBoxListaOfert.DataSource = data;
             listBoxListaOfert.DisplayMember = "TytulOferty";
         }
+
     }
 }

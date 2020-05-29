@@ -12,6 +12,8 @@ namespace Projekt_PSBD.Formularze
         public Panel_logowania()
         {
             InitializeComponent();
+            this.AcceptButton = buttonLogin;
+
         }
 
         private void buttonClear_Click(object sender, EventArgs e)

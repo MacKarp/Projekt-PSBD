@@ -47,6 +47,7 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.buttonDodajAuto = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.buttonUsun = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,15 +214,27 @@
             this.buttonDodajAuto.Name = "buttonDodajAuto";
             this.buttonDodajAuto.Size = new System.Drawing.Size(122, 27);
             this.buttonDodajAuto.TabIndex = 19;
-            this.buttonDodajAuto.Text = "Dodaj auto";
+            this.buttonDodajAuto.Text = "Dodaj ofertę";
             this.buttonDodajAuto.UseVisualStyleBackColor = true;
             this.buttonDodajAuto.Click += new System.EventHandler(this.buttonDodajAuto_Click);
+            // 
+            // buttonUsuń
+            // 
+            this.buttonUsun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonUsun.Location = new System.Drawing.Point(876, 646);
+            this.buttonUsun.Name = "buttonUsuń";
+            this.buttonUsun.Size = new System.Drawing.Size(122, 27);
+            this.buttonUsun.TabIndex = 20;
+            this.buttonUsun.Text = "Usun ofertę";
+            this.buttonUsun.UseVisualStyleBackColor = true;
+            this.buttonUsun.Click += new System.EventHandler(this.buttonUsun_Click);
             // 
             // Form_OknoGlowne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1273, 685);
+            this.Controls.Add(this.buttonUsun);
             this.Controls.Add(this.buttonDodajAuto);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.labelCena);
@@ -272,5 +285,6 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button buttonDodajAuto;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Button buttonUsun;
     }
 }
